@@ -20,6 +20,7 @@ const allowedOrigins = [
     'http://localhost:3000',
     'https://innovis.com',
     'https://www.innovis.com',
+    'https://innovis.vercel.app'
 ];
 
 app.use(cors({
