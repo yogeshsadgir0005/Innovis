@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+/*
+  Tailwind v4 — Innovis Professional SaaS Theme
+  Indigo-Navy enterprise design system
+*/
+@theme {
+  --color-brand-bg:             #06060f;
+  --color-brand-bg-2:           #0c0c1c;
+  --color-brand-surface:        rgba(255,255,255,0.025);
+
+  --color-brand-purple:         #6366f1;
+  --color-brand-purple-light:   #818cf8;
+  --color-brand-purple-dark:    #4f46e5;
+  --color-brand-purple-xdark:   #3730a3;
+
+  --color-brand-text:       #e2e8f0;
+  --color-brand-text-60:    rgba(226,232,240,0.6);
+  --color-brand-text-50:    rgba(226,232,240,0.5);
+  --color-brand-text-40:    rgba(226,232,240,0.4);
+  --color-brand-text-30:    rgba(226,232,240,0.3);
+
+  --color-brand-border:     rgba(99,102,241,0.14);
+  --color-brand-border-md:  rgba(99,102,241,0.28);
+
+  --font-sans:    "DM Sans", system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+/* ── Base Reset ─────────────────────────────────────── */
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #06060f;
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.6;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  img {
+    max-width: 100%;
+    display: block;
+  }
+}
+
+/* ── Shared Utility Classes ─────────────────────────── */
+@layer utilities {
+  .font-display {
+    font-family: "Plus Jakarta Sans", system-ui, sans-serif;
+  }
+
+  .text-brand-gradient {
+    background: linear-gradient(135deg, #818cf8, #6366f1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glass-surface {
+    background: rgba(255,255,255,0.025);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(99,102,241,0.14);
+  }
+
+  .glow-indigo {
+    box-shadow: 0 0 20px rgba(99,102,241,0.28);
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
