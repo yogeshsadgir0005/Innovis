@@ -31,7 +31,7 @@ const About = () => {
 
   const timeline = [
     { year: '2025', title: 'Innovis Founded', desc: 'Established in Sinnar, Maharashtra, Innovis launched its first enterprise consulting platform, delivering bespoke web and SaaS solutions to early-stage clients across India.', align: 'right' },
-    { year: '2025', title: 'First SaaS Platform Deployed', desc: 'Built and shipped our first proprietary multi-tenant SaaS product, establishing Innovis as a serious technology partner for growing businesses.', align: 'left' },
+    { year: '2025', title: 'First Platform Deployed', desc: 'Built and shipped our first proprietary multi-tenant SaaS product, establishing Innovis as a serious technology partner for growing businesses.', align: 'left' },
       { year: '2026', title: 'AI & Automation Division', desc: 'Formally established our AI & Automation practice, integrating large language models, computer vision, and predictive analytics directly into enterprise client workflows.', align: 'right' }
   ];
 
