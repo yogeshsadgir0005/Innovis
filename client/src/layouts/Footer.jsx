@@ -89,7 +89,7 @@ const Footer = () => {
           {/* Logo & About */}
           <div className="footer-brand">
             <div className="flex items-center mb-4">
-              <img src="/LOGO_BGdark.png" alt="Innovis" style={{ height: 28, width: 'auto', objectFit: 'contain', borderRadius: 6 }} />
+              <img src="/LOGO_BGdark.png" alt="Innovis" style={{ height: 100, width: 'auto', objectFit: 'contain', borderRadius: 6 }} />
             </div>
             <p style={{ color: 'rgba(226,232,240,0.45)', fontSize: '13px', lineHeight: 1.65, marginBottom: '20px' }}>
               Engineering the Future with Intelligent Technology. Enterprise IT solutions and SaaS development for global innovators.

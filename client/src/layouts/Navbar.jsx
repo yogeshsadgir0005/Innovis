@@ -99,7 +99,7 @@ const Navbar = () => {
 
             {/* Logo */}
             <Link to="/" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
-              <img src="/LOGO_BGdark.png" alt="Innovis" style={{ height: 30, width: 'auto', objectFit: 'contain', borderRadius: 6 }} />
+              <img src="/LOGO_BGdark.png" alt="Innovis" style={{ height: 100, width: 'auto', objectFit: 'contain', borderRadius: 6 }} />
             </Link>
 
             {/* Desktop Nav Links */}
