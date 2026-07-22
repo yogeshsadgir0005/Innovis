@@ -3,11 +3,11 @@ import { ArrowRight } from 'lucide-react';
 
 const Partners = () => {
   const partners = [
-    { id:1, title:'RightVerse', category:'LEGAL & HUMAN RIGHTS', subtitle:'Justice, Liberty, Equality for All', description:'Empowering citizens to understand the law and stand up for their rights through simplified legal information and education.', image:'/RV.jpeg', bgColor:'rgba(255,255,255,0.02)', url:'https://righ-verse.vercel.app' },
-    { id:2, title:'RK Tours & Travels', category:'TRAVEL & MOBILITY', subtitle:'Book Your Ride, Anytime Anywhere', description:'Reliable, comfortable, and affordable cab booking services operating seamlessly across 100+ cities in India.', image:'/RK.png', bgColor:'#0d0d1e', url:'https://rk-tours-travels.vercel.app' },
-    { id:3, title:'Innovative Staffing Solutions', category:'RECRUITMENT & HR', subtitle:'Redefining Recruitment', description:'Bridging businesses and talent to build stronger teams with budget-friendly, ISO-ready quality, and rapid onboarding.', image:'/ISS.png', bgColor:'rgba(99,102,241,0.06)', url:'https://innovative-staffing.vercel.app' },
-    { id:4, title:'SB Works', category:'FREELANCE MARKETPLACE', subtitle:'Empower Your Journey', description:'Unleash your creativity and skills on a thriving marketplace connecting talented freelancers with businesses seeking excellence.', image:'/SB.png', bgColor:'rgba(255,255,255,0.02)', url:'https://skillbridge-eosin.vercel.app' },
-    { id:5, title:'SkillMint', category:'CAREER & INTERNSHIPS', subtitle:'Your Skills Deserve A Paycheck', description:'Join a platform where students and graduates find real tasks, land internships, and earn while building valuable skills.', image:'/SM.png', bgColor:'#0d0d1e', url:'https://earnkaro-flax.vercel.app' }
+     { id:1, title:'Localify Ai', category:'AI & AUTOMATION', subtitle:'Smart Solutions for a Smarter Future', description:'Leveraging cutting-edge AI to deliver personalized experiences and automate routine tasks, empowering businesses to innovate and grow.', image:'/Localify.png', bgColor:'rgba(99,102,241,0.06)', url:'https://localify-three.vercel.app' },
+     { id:2, title:'SnapShop Ai', category:'AI & AUTOMATION', subtitle:'Ai based Solutions for a Complex Problems', description:'AI-powered product search and shopping assistant that helps users find the best deals and prices across multiple e-commerce platforms.', image:'/SnapShop.png', bgColor:'rgba(99,102,241,0.06)', url:'https://snapshop-ai-eta.vercel.app' },  
+    { id:3, title:'RightVerse Ai', category:'Ai LEGAL & HUMAN RIGHTS', subtitle:'Justice, Liberty, Equality for All', description:'Empowering citizens to understand the law and stand up for their rights through simplified legal information and education.', image:'/RV.png', bgColor:'rgba(255,255,255,0.02)', url:'https://righ-verse.vercel.app' },
+    { id:4, title:'RK Tours & Travels', category:'TRAVEL & MOBILITY', subtitle:'Book Your Ride, Anytime Anywhere', description:'Reliable, comfortable, and affordable cab booking services operating seamlessly across 100+ cities in India.', image:'/RK.png', bgColor:'#0d0d1e', url:'https://rk-tours-travels.vercel.app' },
+   
   ];
 
   return (

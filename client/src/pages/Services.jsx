@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { ArrowRight, Monitor, Cloud, Bot, Code2, Shield, BarChart3, CheckCircle2 } from 'lucide-react';
+import { ArrowRight, Monitor, Cloud, Bot, Code2, Shield, BarChart3, CheckCircle2 , Brush} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Services = () => {
@@ -10,8 +10,9 @@ const Services = () => {
     { id: 'saas', num: '02', icon: Cloud, title: 'SaaS Solutions', desc: 'End-to-end multi-tenant SaaS platforms engineered from the ground up with billing, auth, and analytics.', features: ['Multi-tenant Database Architecture', 'Role-Based Access Control (RBAC)', 'Subscription & Billing Integration', 'Automated Provisioning Workflows'], visualGradient: 'linear-gradient(135deg, rgba(129,140,248,0.16) 0%, rgba(99,102,241,0.04) 100%)' },
     { id: 'ai-automation', num: '03', icon: Bot, title: 'AI & Automation', desc: 'Embed LLMs, computer vision, and predictive analytics directly into your existing workflows.', features: ['Custom LLM Integration & Fine-tuning', 'Computer Vision & Data Extraction', 'Automated Customer Support Agents', 'Predictive Business Analytics'], visualGradient: 'linear-gradient(135deg, rgba(99,102,241,0.16) 0%, rgba(55,48,163,0.04) 100%)' },
     { id: 'cloud-services', num: '04', icon: Code2, title: 'Cloud Services', desc: 'Seamless migration to AWS, Azure, or GCP with zero downtime strategies and 99.99% uptime.', features: ['Zero-Downtime Cloud Migration', 'Serverless Architecture Design', 'Docker & Kubernetes Orchestration', '24/7 Cloud Monitoring & Support'], visualGradient: 'linear-gradient(135deg, rgba(99,102,241,0.16) 0%, rgba(15,23,42,0.08) 100%)' },
-    { id: 'cybersecurity', num: '05', icon: Shield, title: 'Cybersecurity', desc: 'Zero-trust architectures, rigorous penetration testing, and full compliance for regulated industries.', features: ['Zero-Trust Network Implementation', 'Vulnerability & Penetration Testing', 'Data Encryption (At Rest & In Transit)', 'SOC 2 & ISO 27001 Compliance Prep'], visualGradient: 'linear-gradient(135deg, rgba(129,140,248,0.16) 0%, rgba(79,70,229,0.04) 100%)' },
+      { id: 'Ui Ux Design', num: '05', icon: Brush, title: 'Ui Ux Design', desc: 'Creating intuitive and engaging user experiences through thoughtful design and research.', features: ['User Research & Personas', 'Wireframing & Prototyping', 'Visual Design & Branding', 'Usability Testing'], visualGradient: 'linear-gradient(135deg, rgba(99,102,241,0.16) 0%, rgba(55,48,163,0.04) 100%)' },
     { id: 'data-engineering', num: '06', icon: BarChart3, title: 'Data Engineering', desc: 'Real-time pipelines, data lakes, and BI dashboards that turn raw data into actionable business decisions.', features: ['Real-Time Data Streaming Pipelines', 'Data Warehouse & Lakehouse Setup', 'ETL / ELT Process Automation', 'Interactive BI Dashboards'], visualGradient: 'linear-gradient(135deg, rgba(99,102,241,0.16) 0%, rgba(46,16,101,0.04) 100%)' }
+
   ];
 
   return (

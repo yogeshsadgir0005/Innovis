@@ -9,7 +9,7 @@ const CaseStudies = () => {
 
   const studies = [
     {
-      client: 'RIGHTVERSE',
+      client: 'RIGHTVERSE Ai',
       title: 'Building a Legal Awareness Platform for Citizens',
       problem: 'Citizens lacked access to clear, simplified legal information, leaving them unable to understand or exercise their basic rights.',
       solution: 'Designed and launched a full-stack legal awareness web platform with categorised law guides, rights summaries, and an intuitive search experience.',
@@ -20,6 +20,27 @@ const CaseStudies = () => {
       deep: "We built RightVerse from the ground up using React and a Node.js backend. The platform features a structured content library covering criminal, civil, and constitutional law, all written in plain language. SEO-optimised pages and a clean search experience help users find relevant legal topics quickly. Since launch, the platform has grown to 3,000+ monthly visitors with a user satisfaction rating of 4.7 out of 5."
     },
     {
+      client: 'SnapShop Ai',
+      title: 'AI-Powered Shopping assistant for E-commerce',
+      problem: 'Finding Products links to purchase , which you see on social media ',
+      solution: 'Delivered Ai Powered search and shopping assistant with just image upload and get the product links with best prices and deals from multiple e-commerece platforms.',
+      results: [
+        { icon: <Zap size={18}/>, stat: '+80%', label: 'Faster Search' },
+        { icon: <TrendingDown size={18}/>, stat: '-4 hours', label: 'Manual Efforts' }
+      ],
+      deep: "We built a structured recruitment workflow tool that helps the Product search from initial outreach through final onboarding. Document checklists and a shared dashboard keep all stakeholders aligned and cut down on back-and-forth communication. Since going live, the team has reduced average onboarding time from 11 days to 7, and overall hiring coordination speed has improved by around 80%."
+    },
+    {
+      client: 'Localify Ai',
+      title: 'AI-Powered Recruitment Management',
+      problem: 'Find local businesses and their contact details along with manually creating website prototypes and pinch scripts manually',
+      solution: 'Delivered Ai Powered management platform with structured pipelines, Business tracking, and compliance-ready reporting tools.',
+      results: [
+        { icon: <Zap size={18}/>, stat: '+80%', label: 'Clients' },
+        { icon: <TrendingDown size={18}/>, stat: '-4 hours', label: 'Manual Time' }
+      ],
+      deep: "We built a structured recruitment workflow tool that helps the team track candidates from initial outreach through final onboarding. Document checklists and a shared dashboard keep all stakeholders aligned and cut down on back-and-forth communication. Since going live, the team has reduced average onboarding time from 11 days to 7, and overall hiring coordination speed has improved by around 80%."
+    }, {
       client: 'RK TOURS & TRAVELS',
       title: 'Modernising Cab Booking Across Multiple Cities',
       problem: 'The booking process relied on phone calls and manual coordination, causing delays, customer drop-off, and difficulty scaling operations.',
@@ -28,41 +49,9 @@ const CaseStudies = () => {
         { icon: <Zap size={18}/>, stat: '+95%', label: 'Booking Volume' },
         { icon: <TrendingDown size={18}/>, stat: '-42%', label: 'Drop-off Rate' }
       ],
-      deep: "We built a responsive React frontend paired with a Node.js backend to handle booking requests, route details, and confirmation notifications. A lightweight admin panel gives the team clear visibility over active bookings and customer requests. Within the first few months of launch, online bookings nearly doubled compared to the previous phone-only flow, and checkout drop-off reduced by around 42%."
-    },
-    {
-      client: 'INNOVATIVE STAFFING SOLUTIONS',
-      title: 'Streamlining Recruitment Operations for Growing Teams',
-      problem: 'Manual hiring workflows created bottlenecks and slowed client onboarding, making it hard to deliver consistent, quality placements.',
-      solution: 'Delivered a recruitment management platform with structured candidate pipelines, document tracking, and compliance-ready reporting tools.',
-      results: [
-        { icon: <Zap size={18}/>, stat: '+80%', label: 'Hiring Speed' },
-        { icon: <TrendingDown size={18}/>, stat: '-4 Days', label: 'Onboarding Time' }
-      ],
-      deep: "We built a structured recruitment workflow tool that helps the team track candidates from initial outreach through final onboarding. Document checklists and a shared dashboard keep all stakeholders aligned and cut down on back-and-forth communication. Since going live, the team has reduced average onboarding time from 11 days to 7, and overall hiring coordination speed has improved by around 80%."
-    },
-    {
-      client: 'SB WORKS',
-      title: 'Launching a Freelance Marketplace for Creative Talent',
-      problem: 'Freelancers lacked a dedicated platform to find consistent work, while small businesses struggled to source reliable creative and technical help.',
-      solution: 'Built SB Works — a freelance marketplace with profile creation, project posting, proposals, and a straightforward payments workflow.',
-      results: [
-        { icon: <BarChart3 size={18}/>, stat: '300+', label: 'Registered Users' },
-        { icon: <Zap size={18}/>, stat: '100+', label: 'Projects Posted' }
-      ],
-      deep: "We built SB Works as a two-sided marketplace using React, MongoDB, and Node.js. Freelancers create skill profiles and submit proposals for posted projects, while businesses review applicants and hire directly through the platform. A simple payment workflow builds trust on both sides. Since launch, the platform has grown to 300+ registered users with over 100 projects posted across various skill categories."
-    },
-    {
-      client: 'SKILLMINT',
-      title: 'Creating a Career & Internship Platform for Students',
-      problem: 'Students and fresh graduates struggled to find legitimate paid opportunities, leaving a gap between education and real-world work experience.',
-      solution: 'Launched SkillMint — a career platform connecting students with paid micro-tasks, internships, and short-term projects to build experience and income.',
-      results: [
-        { icon: <Zap size={18}/>, stat: '700+', label: 'Students Signed Up' },
-        { icon: <BarChart3 size={18}/>, stat: '80+', label: 'Opportunities Listed' }
-      ],
-      deep: "We built SkillMint with a student-first UX, featuring easy profile creation, task browsing with skill-based filters, and a simple earnings tracker. Employers and startups can post micro-tasks or internship listings and receive applicant submissions quickly. The platform has onboarded 700+ students and listed 80+ paid opportunities since launch, with steady week-on-week growth across both sides of the marketplace."
+        deep: "We built a responsive React frontend paired with a Node.js backend to handle booking requests, route details, and confirmation notifications. A lightweight admin panel gives the team clear visibility over active bookings and customer requests. Within the first few months of launch, online bookings nearly doubled compared to the previous phone-only flow, and checkout drop-off reduced by around 42%."
     }
+
   ];
 
   return (

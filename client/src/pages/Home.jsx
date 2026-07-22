@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Monitor, Cloud, Bot, Code2, Lightbulb, Settings, RefreshCw, ArrowRight, Shield, BarChart3, Zap, Globe } from 'lucide-react';
+import { Monitor, Cloud, Bot, Code2, Lightbulb, Settings, RefreshCw, ArrowRight, Shield, BarChart3, Zap, Globe ,Brush} from 'lucide-react';
 
 const Home = () => {
   const myPartners = [
-    { name: "RightVerse",           image: "/RV.jpeg" },
+      { name: "Localify Ai",  image: "/Localify.png" },
+    { name: "SnapShop Ai",  image: "/SnapShop.png" },
+    { name: "RightVerse Ai",           image: "/RV.png" },
     { name: "RK Tours & Travels",   image: "/RK.png" },
-    { name: "Innovative Staffing",  image: "/ISS.png" },
-    { name: "SB Works",             image: "/SB.png" },
-    { name: "SkillMint",            image: "/SM.png" }
+  
   ];
 
   const stats = [
@@ -22,7 +22,7 @@ const Home = () => {
     { icon: <Cloud size={20} />,     num: "02", title: "SaaS Solutions",    desc: "End-to-end multi-tenant SaaS platforms with billing, auth, and analytics built in from day one." },
     { icon: <Bot size={20} />,       num: "03", title: "AI & Automation",   desc: "Embed LLMs, computer vision, and predictive analytics directly into your existing workflows." },
     { icon: <Code2 size={20} />,     num: "04", title: "Cloud Services",    desc: "Seamless migration to AWS, Azure, or GCP with zero downtime strategies and 99.99% uptime." },
-    { icon: <Shield size={20} />,    num: "05", title: "Cybersecurity",     desc: "Penetration testing, compliance auditing, and zero-trust implementation for regulated industries." },
+    { icon: <Brush size={20} />,    num: "05", title: "Ui Ux design",     desc: "Creating intuitive and engaging user experiences through thoughtful design and research." },
     { icon: <BarChart3 size={20} />, num: "06", title: "Data Engineering",  desc: "Real-time pipelines, data lakes, and BI dashboards that turn raw data into business decisions." },
   ];
 
@@ -218,8 +218,7 @@ const Home = () => {
                   onMouseEnter={e => { e.currentTarget.style.boxShadow = "0 6px 18px rgba(99,102,241,0.18)"; e.currentTarget.style.transform = "scale(1.05)"; e.currentTarget.style.borderColor = "rgba(99,102,241,0.3)"; }}
                   onMouseLeave={e => { e.currentTarget.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)"; e.currentTarget.style.transform = "scale(1)"; e.currentTarget.style.borderColor = "rgba(99,102,241,0.12)"; }}
                 />
-                <span style={{ fontSize: 14, fontWeight: 700, color: "rgba(226,232,240,0.7)", whiteSpace: "nowrap", fontFamily: "'Plus Jakarta Sans', sans-serif" }}>{partner.name}</span>
-              </div>
+                       </div>
             ))}
           </div>
         </div>
