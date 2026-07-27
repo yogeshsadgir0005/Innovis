@@ -27,17 +27,18 @@ export default function Navbar() {
     <div className="container nav-inner">
       <Link to="/" className="brand-link" aria-label="Innovis home"><BrandLockup/></Link>
       <nav className="nav-links" aria-label="Primary navigation">
-        {links.map(link => <Link key={link.path} to={link.path} className={`nav-link${pathname === link.path ? ' active' : ''}`}>{link.name}</Link>)}
+        {links.map(link => <Link key={link.path} to={link.path} className={`nav-link${pathname === link.path ? ' active' : ''}`} aria-current={pathname === link.path ? 'page' : undefined}>{link.name}</Link>)}
       </nav>
       <Link to="/contact" className="nav-contact">Start a project</Link>
       <button className="nav-toggle" onClick={() => setOpen(v => !v)} aria-label={open ? 'Close menu' : 'Open menu'} aria-expanded={open}>{open ? <X size={21}/> : <Menu size={21}/>}</button>
     </div>
     <nav className={`mobile-menu${open ? ' open' : ''}`} aria-label="Mobile navigation" aria-hidden={!open}>
-      {links.map(link => <Link key={link.path} to={link.path} onClick={() => setOpen(false)}>{link.name}</Link>)}
+      {links.map(link => <Link key={link.path} to={link.path} className={pathname === link.path ? 'active' : undefined} aria-current={pathname === link.path ? 'page' : undefined} onClick={() => setOpen(false)}>{link.name}</Link>)}
       <Link to="/contact" onClick={() => setOpen(false)}>Start a project</Link>
     </nav>
   </header>;
 }
+
 
 
 
