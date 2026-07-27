@@ -122,3 +122,8 @@
 .nav-link:after{bottom:2px;background:var(--forest)}
 .mobile-menu a.active{color:var(--forest);border-bottom-color:var(--forest)}
 html,body{overflow-x:clip}
+
+/* Desktop presentation scale: approximates a comfortable 110% browser zoom. */
+@media(min-width:1101px){
+  .navbar,.site-main,.footer{zoom:1.1}
+}
