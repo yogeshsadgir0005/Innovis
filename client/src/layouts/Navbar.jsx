@@ -3,9 +3,10 @@ import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const links = [
+  { name: 'Home', path: '/' },
+  { name: 'Clients & Partners', path: '/partners' },
   { name: 'Services', path: '/services' },
-  { name: 'Work', path: '/case-studies' },
-  { name: 'Clients & ventures', path: '/partners' },
+  { name: 'Case Studies', path: '/case-studies' },
   { name: 'About', path: '/about' },
 ];
 
@@ -37,4 +38,7 @@ export default function Navbar() {
     </nav>
   </header>;
 }
+
+
+
 
