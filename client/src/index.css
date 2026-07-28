@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&display=swap');
 
 :root{--paper:#f7f5ef;--paper-deep:#ece7f2;--ink:#17131f;--soft:#625d69;--forest:#4b2c7f;--deep:#201331;--mint:#ddd4f0;--clay:#e1683f;--yellow:#f2c94c;--line:#d4cedb;--white:#fffdfb;--serif:"Newsreader",Georgia,serif;--sans:"IBM Plex Sans",Arial,sans-serif}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 var(--sans);-webkit-font-smoothing:antialiased}body.menu-open{overflow:hidden}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{color:inherit}img{max-width:100%;display:block}::selection{background:var(--yellow)}:focus-visible{outline:3px solid var(--clay);outline-offset:3px}
@@ -127,3 +127,21 @@ html,body{overflow-x:clip}
 @media(min-width:1101px){
   .navbar,.site-main,.footer{zoom:1.1}
 }
+
+/* Client cards: previews lead; transparent logos sit outside the artwork. */
+.client-preview-frame{position:relative;width:100%;aspect-ratio:2.1/1;overflow:hidden;border:1px solid #ffffff80;background:#fff;box-shadow:0 14px 32px #160a254a}
+.client-preview{width:100%!important;height:100%!important;max-width:none!important;max-height:none!important;object-fit:cover!important;object-position:top center}
+.client-logo-badge{position:absolute;z-index:2;left:18px;top:auto;bottom:14px;display:flex;align-items:center;max-width:36%;padding:0;border:0;background:transparent}
+.project-art>.client-logo-badge,.venture-art>.client-logo-badge{top:auto}
+.client-card-logo{display:block;width:auto!important;height:auto!important;max-width:128px!important;max-height:32px!important;padding:0!important;border:0!important;filter:none!important;opacity:1!important;object-fit:contain!important}
+.project-feature{grid-template-columns:1.22fr .78fr}
+.project-art{padding:42px 20px 58px}
+.project-art .client-preview-frame{margin-top:2px}
+.project-art>small{left:auto;right:18px}
+.venture-project{grid-template-columns:1.25fr .75fr}
+.venture-art{padding:48px 46px 62px}
+.venture-art .client-logo-badge{left:22px;bottom:18px;max-width:30%}
+.venture-art .client-card-logo{max-width:160px!important;max-height:38px!important}
+.venture-copy{padding:48px}
+@media(max-width:1000px){.project-feature,.venture-project{grid-template-columns:1fr}}
+@media(max-width:680px){.project-art{padding:42px 18px 58px}.venture-art{padding:44px 24px 58px}.venture-art .client-logo-badge{left:16px;bottom:16px;max-width:36%}.venture-art .client-card-logo{max-width:118px!important;max-height:30px!important}.venture-copy{padding:38px 28px}}

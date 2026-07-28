@@ -1,11 +1,11 @@
-﻿import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { ArrowRight, Monitor, Bot, Cloud, Brush, BarChart3, Code2 } from 'lucide-react';
 
 const projects = [
-  { name:'Localify AI', category:'AI business discovery', copy:'Research, qualify and prepare local-business outreach in one managed workflow.', image:'/Localify.png', url:'https://localify-three.vercel.app', tone:'blue' },
-  { name:'SnapShop AI', category:'Visual commerce', copy:'Turn a product image into comparable places to buy—without knowing the product name.', image:'/SnapShop.png', url:'https://snapshop-ai-eta.vercel.app', tone:'orange' },
-  { name:'RightVerse AI', category:'Legal access', copy:'Plain-language legal information that helps citizens find and understand everyday rights.', image:'/RV.png', url:'https://righ-verse.vercel.app', tone:'gold' },
-  { name:'RK Tours & Travels', category:'Travel operations', copy:'A direct mobile booking experience for a growing multi-city transport business.', image:'/RK.png', url:'https://rk-tours-travels.vercel.app', tone:'rose' },
+  { name:'Localify AI', category:'AI business discovery', copy:'Research, qualify and prepare local-business outreach in one managed workflow.', image:'/Localify.png', preview:'/Localifypreview.png', url:'https://localify-three.vercel.app', tone:'blue' },
+  { name:'RK Tours & Travels', category:'Travel operations', copy:'A direct mobile booking experience for a growing multi-city transport business.', image:'/RK.png', preview:'/RKpreview.png', url:'https://rk-tours-travels.vercel.app', tone:'rose' },
+  { name:'SnapShop AI', category:'Visual commerce', copy:'Turn a product image into comparable places to buy—without knowing the product name.', image:'/SnapShop.png', preview:'/SnapShopPreview.png', url:'https://snapshop-ai-eta.vercel.app', tone:'orange' },
+  { name:'RightVerse AI', category:'Legal access', copy:'Plain-language legal information that helps citizens find and understand everyday rights.', image:'/RV.png', preview:'/RVpreview.png', url:'https://righ-verse.vercel.app', tone:'gold' },
 ];
 const services = [
   {icon:Monitor,n:'01',title:'Web & product engineering',copy:'Customer-facing products and operational software built for performance, accessibility and growth.',tags:['Web apps','SaaS platforms','APIs']},
@@ -36,7 +36,7 @@ export default function Home(){return <>
   <section className="work-showcase">
     <div className="container">
       <div className="showcase-heading"><div><p className="kicker">Clients & ventures</p><h2>Proof you can see,<br/>not promises you have to trust.</h2></div><div><p>These are real products our team has designed and engineered across AI, commerce, legal access and travel.</p><Link className="text-link" to="/case-studies">Read the case studies <ArrowRight size={15}/></Link></div></div>
-      <div className="project-showcase-grid">{projects.map((p,i)=><a className={`project-feature project-feature--${p.tone}`} href={p.url} target="_blank" rel="noreferrer" key={p.name}><div className="project-art"><span>0{i+1}</span><img src={p.image} alt={p.name}/><small>View live product ↗</small></div><div className="project-info"><span>{p.category}</span><h3>{p.name}</h3><p>{p.copy}</p></div></a>)}</div>
+      <div className="project-showcase-grid">{projects.map((p,i)=><a className={`project-feature project-feature--${p.tone}`} href={p.url} target="_blank" rel="noreferrer" key={p.name}><div className="project-art"><span>0{i+1}</span><div className="client-preview-frame"><img className="client-preview" src={p.preview} alt={`${p.name} product preview`}/></div><span className="client-logo-badge"><img className="client-card-logo" src={p.image} alt="" aria-hidden="true"/></span><small>View live product ↗</small></div><div className="project-info"><span>{p.category}</span><h3>{p.name}</h3><p>{p.copy}</p></div></a>)}</div>
     </div>
   </section>
 
@@ -51,4 +51,3 @@ export default function Home(){return <>
 
   <section className="container contact-band"><div><p className="kicker">Have a product or process to improve?</p><h2 className="section-title">Let’s turn it into a working system.</h2></div><Link to="/contact" className="button">Start the conversation <ArrowRight size={16}/></Link></section>
 </>}
-
