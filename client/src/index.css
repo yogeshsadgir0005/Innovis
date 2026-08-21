@@ -84,9 +84,12 @@
 /* Two product cards without the former outer showcase frame. */
 .product-stage{min-height:500px;padding:0;background:transparent;border:0;box-shadow:none;overflow:visible}
 .product-stage::before{display:none}
-.stage-window--main{width:82%;height:330px;margin:24px 0 0;padding:58px 46px 36px;box-shadow:12px 12px 0 #d9cfea}
-.stage-window--side{width:58%;height:180px;right:0;bottom:20px;box-shadow:10px 10px 0 #d9cfea}
-@media(max-width:680px){.product-stage{min-height:400px;margin-top:4px;padding:0;box-shadow:none}.stage-window--main{width:88%;height:250px;margin:0;padding:50px 28px 32px}.stage-window--side{width:62%;height:135px;right:0;bottom:8px;padding:38px 15px 27px}}
+.stage-window--main{width:82%;height:330px;margin:24px 0 0;padding:46px 18px 42px;box-shadow:12px 12px 0 #d9cfea}
+.stage-window--side{width:58%;height:180px;right:0;bottom:20px;padding:14px 14px 34px;box-shadow:10px 10px 0 #d9cfea}
+.stage-window--main,.stage-window--side{border:0}
+.stage-browser{border-bottom:0}
+.stage-window .stage-preview{width:100%;height:100%;max-width:none;max-height:none;object-fit:contain;object-position:center;border:0}
+@media(max-width:680px){.product-stage{min-height:400px;margin-top:4px;padding:0;box-shadow:none}.stage-window--main{width:88%;height:250px;margin:0;padding:42px 12px 38px}.stage-window--side{width:62%;height:135px;right:0;bottom:8px;padding:10px 10px 29px}}
 
 /* Compact, light page headers for inner pages. */
 .compact-page-hero{padding:44px 0 38px;background:var(--paper);border-bottom:1px solid var(--line)}
@@ -109,7 +112,7 @@
 .route-wipe{transform:none;clip-path:circle(0% at 86% 8%)}
 .motion-cursor-core,.motion-cursor-ring{position:fixed;z-index:1000;top:0;left:0;pointer-events:none;opacity:0;visibility:hidden;transform:translate(-50%,-50%)}
 .motion-cursor-core{width:7px;height:7px;border-radius:50%;background:#4b2c7f}
-.motion-cursor-ring{width:31px;height:31px;border:1px solid #4b2c7f;border-radius:50%;mix-blend-mode:multiply}
+.motion-cursor-ring{width:31px;height:31px;border:0;border-radius:50%;background:#f2c94c38;mix-blend-mode:multiply}
 @media(pointer:fine){html.motion-cursor-enabled,html.motion-cursor-enabled body,html.motion-cursor-enabled a,html.motion-cursor-enabled button{cursor:none}html.motion-cursor-enabled input,html.motion-cursor-enabled textarea{cursor:text}}
 @media(pointer:coarse),(prefers-reduced-motion:reduce){.motion-cursor-core,.motion-cursor-ring{display:none!important}}
 
