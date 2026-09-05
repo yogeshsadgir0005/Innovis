@@ -1,18 +1,11 @@
-﻿import { Link } from 'react-router-dom';
-import { ArrowRight, Monitor, Bot, Cloud, Brush, BarChart3, Code2 } from 'lucide-react';
-const offers=[
- {n:'01',icon:Monitor,title:'Web & product engineering',lead:'Launch customer-facing products and operational software without separating product decisions from technical delivery.',desc:'We shape the product, define the architecture and build the interface and backend as one system.',items:['Product strategy & architecture','Responsive accessible interfaces','API and platform development','Release support'],kind:'build'},
- {n:'02',icon:Bot,title:'AI & workflow automation',lead:'Reduce manual work with AI that sits inside a clear, reviewable operating process.',desc:'We focus on the handoffs, source material and decisions around the model—not just the model itself.',items:['LLM and retrieval workflows','Document and image extraction','Support and research assistants','Human review controls'],kind:'ai'},
- {n:'03',icon:Brush,title:'UI/UX & product design',lead:'Turn complex requirements into interfaces people can understand and use with confidence.',desc:'Research, interaction design and visual systems stay connected to engineering constraints from day one.',items:['Workflow and user research','Information architecture','Interactive prototypes','Product design systems'],kind:'design'},
- {n:'04',icon:Cloud,title:'Cloud architecture & DevOps',lead:'Build a stable path from code to production, with the visibility to know when something is wrong.',desc:'We design infrastructure around resilience, sensible cost and the team that will operate it.',items:['AWS, Azure and GCP','Migration planning','CI/CD and containers','Monitoring and incident readiness'],kind:'cloud'},
- {n:'05',icon:BarChart3,title:'Data engineering',lead:'Create dependable pipelines and reporting so decisions are not made from conflicting spreadsheets.',desc:'We connect, model and validate business data before presenting it through useful operational views.',items:['ETL and system integrations','Data modelling','Operational dashboards','Data quality controls'],kind:'data'},
- {n:'06',icon:Code2,title:'Platform modernisation',lead:'Replace the fragile parts of an existing system without placing the whole business at risk.',desc:'We audit the current platform, isolate the highest-risk constraints and modernise in controlled stages.',items:['Architecture and UX audit','Incremental re-platforming','Legacy system integration','Performance and reliability'],kind:'modern'},
-];
-function SystemVisual({kind,icon}){const Graphic=icon;return <div className={`system-visual system-visual--${kind}`}><div className="system-visual-bar"><i/><i/><i/><span>innovis / {kind}</span></div><div className="system-canvas"><Graphic size={44}/><div className="system-lines"><b/><b/><b/></div><div className="system-node system-node--a"/><div className="system-node system-node--b"/><div className="system-status">READY</div></div></div>}
-export default function Services(){return <>
- <header className="compact-page-hero"><div className="container compact-page-hero-grid"><h1>Services</h1><p>Product design, software engineering, AI, cloud and data—delivered by one team.</p></div></header>
- <section className="service-modules"><div className="container">{offers.map((s,i)=>{const Icon=s.icon;return <article className={`service-module${i%2?' service-module--reverse':''}`} key={s.n}><div className="service-module-copy"><div className="service-module-label"><span>{s.n}</span><Icon size={25}/></div><h2>{s.title}</h2><p className="service-module-lead">{s.lead}</p><p>{s.desc}</p><ul>{s.items.map(x=><li key={x}>{x}</li>)}</ul><Link to="/contact" className="text-link">Discuss this capability <ArrowRight size={14}/></Link></div><SystemVisual kind={s.kind} icon={Icon}/></article>})}</div></section>
- <section className="service-cta"><div className="container"><div><p className="kicker">Not sure what the solution is yet?</p><h2>Start with what is not working.</h2></div><p>Bring us the manual process, customer frustration or technical constraint. Defining the right intervention is part of the work.</p><Link to="/contact" className="button">Map the problem with us <ArrowRight size={16}/></Link></div></section>
- </>}
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
+import ServiceCatalogue from '../components/ServiceCatalogue';
 
+export default function Services() {
+  return <>
+    <ServiceCatalogue />
 
+    <section className="service-cta"><div className="container"><div><p className="kicker">Not sure what the solution is yet?</p><h2>Start with what is not working.</h2></div><p>Bring us the manual process, customer frustration or technical constraint. Defining the right intervention is part of the work.</p><Link to="/contact" className="button">Map the problem with us <ArrowRight size={16} /></Link></div></section>
+  </>;
+}

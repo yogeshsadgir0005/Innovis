@@ -10,7 +10,7 @@ export default function Footer() {
         </div>
         <nav className="footer-nav" aria-label="Footer navigation">
           <Link to="/services">Services</Link><Link to="/case-studies">Case studies</Link>
-          <Link to="/partners">Clients & ventures</Link><Link to="/about">About</Link>
+          <Link to="/clients">Clients</Link><Link to="/partners">Partners</Link><Link to="/about">About</Link>
           <Link to="/careers">Careers</Link><Link to="/contact">Contact</Link>
         </nav>
       </div>

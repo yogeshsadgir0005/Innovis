@@ -36,8 +36,8 @@ const submitContact = async (req, res) => {
         // ── Send confirmation email via Brevo ──
         if (process.env.BREVO_API_KEY) {
             const emailData = {
-                sender: { name: 'Innovis Website', email: 'yogeshsadgir05@gmail.com' },
-                to: [{ email: 'yogeshsadgir05@gmail.com', name: 'Innovis Admin' }], 
+                sender: { name: 'Innovis Website', email: 'innovistech63@gmail.com' },
+                to: [{ email: 'innovistech63@gmail.com', name: 'Innovis Admin' }],
                 replyTo: { email: email, name: fullName },
                 subject: `New Lead: Inquiry from ${fullName}`,
                 htmlContent: `
