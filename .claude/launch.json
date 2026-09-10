@@ -4,8 +4,49 @@
     {
       "name": "innovis-client",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["--prefix", "client", "run", "dev"],
+      "runtimeArgs": [
+        "--prefix",
+        "client",
+        "run",
+        "dev"
+      ],
       "port": 5173
+    },
+    {
+      "name": "innovis-server",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "server",
+        "run",
+        "dev"
+      ],
+      "port": 5000,
+      "autoPort": true
+    },
+    {
+      "name": "billing-website",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "C:/Users/sadgi/Desktop/Billing/website",
+        "run",
+        "dev"
+      ],
+      "port": 5174,
+      "autoPort": true
+    },
+    {
+      "name": "billing-api",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": [
+        "--prefix",
+        "C:/Users/sadgi/Desktop/Billing/server",
+        "run",
+        "dev"
+      ],
+      "port": 5001,
+      "autoPort": true
     }
   ]
 }

@@ -29,7 +29,11 @@ const subscribe = async (req, res) => {
         // Send confirmation email via Brevo if key is configured
         if (process.env.BREVO_API_KEY) {
             const emailData = {
-                sender: { name: 'Innovis IT Solutions', email: 'no-reply@innovis.com' },
+                sender: {
+                    name: 'Innovis IT Solutions',
+                    email: process.env.BREVO_SENDER_EMAIL
+                },
+                replyTo: { email: process.env.SUPPORT_EMAIL, name: 'Innovis' },
                 to: [{ email: sanitizedEmail }],
                 subject: "You're subscribed to Innovis Updates",
                 htmlContent: `
@@ -42,7 +46,15 @@ const subscribe = async (req, res) => {
                         — The Innovis Engineering Team
                       </p>
                     </div>
-                `
+                `,
+                textContent: [
+                    "You're in.",
+                    '',
+                    "Thanks for subscribing to Innovis insights. You'll receive our latest case studies,",
+                    'technology trends, and engineering updates directly in your inbox.',
+                    '',
+                    '- The Innovis Engineering Team'
+                ].join('\n')
             };
 
             await axios.post('https://api.brevo.com/v3/smtp/email', emailData, {

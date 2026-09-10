@@ -36,8 +36,11 @@ const submitContact = async (req, res) => {
         // ── Send confirmation email via Brevo ──
         if (process.env.BREVO_API_KEY) {
             const emailData = {
-                sender: { name: 'Innovis Website', email: 'innovistech63@gmail.com' },
-                to: [{ email: 'innovistech63@gmail.com', name: 'Innovis Admin' }],
+                sender: {
+                    name: 'Innovis Website',
+                    email: process.env.BREVO_SENDER_EMAIL
+                },
+                to: [{ email: process.env.SUPPORT_EMAIL, name: 'Innovis Admin' }],
                 replyTo: { email: email, name: fullName },
                 subject: `New Lead: Inquiry from ${fullName}`,
                 htmlContent: `
@@ -53,7 +56,18 @@ const submitContact = async (req, res) => {
                         <p style="color: #f0eeff; font-size: 15px; line-height: 1.7;">${message}</p>
                       </div>
                     </div>
-                `
+                `,
+                textContent: [
+                    'New contact form submission',
+                    '',
+                    `Name: ${fullName}`,
+                    `Email: ${email}`,
+                    `Company: ${company || 'N/A'}`,
+                    `Phone: ${phone || 'N/A'}`,
+                    '',
+                    'Message:',
+                    message
+                ].join('\n')
             };
 
             await axios.post('https://api.brevo.com/v3/smtp/email', emailData, {
