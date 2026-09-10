@@ -1,0 +1,4 @@
+
+# Secrets. Values live in the Render dashboard, not the repo.
+server/.env
+server/.env.local
