@@ -20,7 +20,14 @@ export default function Contact(){
    setStatus({loading:false,error:null,success:true});
    setData({fullName:'',email:'',company:'',phone:'',message:''});
   }catch(err){
-   setStatus({loading:false,success:false,error:err.response?.data?.message||'We could not send your message. Please try again.'});
+   // No response at all means the request never reached the server - a sleeping
+   // free-tier instance, or the visitor's connection. Saying "we could not send
+   // your message" there is misleading: nothing was rejected, it just did not
+   // arrive, and trying again usually works because the first attempt woke it.
+   const reachedServer=Boolean(err.response);
+   setStatus({loading:false,success:false,error:reachedServer
+    ?(err.response?.data?.message||'We could not send your message. Please try again.')
+    :'We could not reach our server just now. It may be waking up - please try once more.'});
   }
  };
  return <>
